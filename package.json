@@ -1,0 +1,25 @@
+{
+  "name": "capexserver",
+  "version": "1.0.0",
+  "description": "> ### Run `npm run launch` to build and run the server",
+  "scripts": {
+    "copy": "cp ./src/StockConfig.json ./build/",
+    "build": "tsc ./src/CapitalExchangeServer.ts ./src/NumberGenerator.ts --outDir ./build/ --module commonjs --target es2016",
+    "launch": "node ./build/CapitalExchangeServer.js",
+    "dev": "npm run copy && npm run build && npm run launch",
+    "set": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alea": "^1.0.1",
+    "simplex-noise": "^4.0.1",
+    "typescript": "^4.9.4",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/ws": "^8.5.3"
+  }
+}

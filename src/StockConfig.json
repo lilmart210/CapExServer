@@ -1,0 +1,17 @@
+{
+  "CRRPT" : {
+    "name" : "Currupt Nations",
+    "seed" : 355,
+    "wander" : 0.3
+  },
+  "SYS1CPT" : {
+      "name" : "Systic 1 Capitol",
+      "seed" : 34225,
+      "wander" : 0.3
+  },
+  "EDGEFND" : {
+      "name" : "Edge Fund",
+      "seed" : 345,
+      "wander" : 0.3
+  }
+}
