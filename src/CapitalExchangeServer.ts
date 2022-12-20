@@ -138,7 +138,12 @@ function launchServer(){
             //send fill data
             if(data.start){
               const res = getData(data.ticker,data.period,data.start,end);
-              socket.send(JSON.stringify(GoodRequest(res,direction)));
+              const pckg = {
+                data : res,
+                ticker : data.ticker,
+                period : data.period
+              }
+              socket.send(JSON.stringify(GoodRequest(pckg,direction)));
             }
             //subscribe to ticker
             MakeUpdateTimer(socket,data,end,direction);
@@ -193,7 +198,12 @@ function launchServer(){
           //good to go, try to send data
           try{
             const res = getData(data.ticker,data.period,data.start,data.end);
-            socket.send(JSON.stringify(GoodRequest(res,direction)));
+            const pckg = {
+              data : res,
+              ticker : data.ticker,
+              period : data.period
+            }
+            socket.send(JSON.stringify(GoodRequest(pckg,direction)));
           }catch(e){
             console.error(e);
             socket.send(JSON.stringify(BadRequest("Runtime Error : Something Happened",direction)))
