@@ -142,15 +142,19 @@
 ```json
 {
     "status": 1,
-    "data": [
-        {
-            "open": 195.8,
-            "high": 195.8,
-            "low": 93.97,
-            "close": 93.97,
-            "index": 1670775776500
-        },
-    ],
+    "data": {
+        "data" : [
+            {
+                "open": 195.8,
+                "high": 195.8,
+                "low": 93.97,
+                "close": 93.97,
+                "index": 1670775776500
+            },
+        ],
+       "ticker" : "CRRPT",
+       "period" : 1000
+    },
     "msg": "fetch"
 }
 
@@ -175,15 +179,19 @@
 ```json
 {
     "status": 1,
-    "data": [
-        {
-            "open": 236.6,
-            "high": 280.72,
-            "low": 190.82,
-            "close": 226.94,
-            "index": 1671326185500
-        }
-    ],
+    "data": {
+        "data" : [
+            {
+                "open": 236.6,
+                "high": 280.72,
+                "low": 190.82,
+                "close": 226.94,
+                "index": 1671326185500
+            }
+        ],
+        "ticker" : "CRRPT",
+        "period" : 1000
+    },
     "msg": "subscribe"
 }
 
