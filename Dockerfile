@@ -2,13 +2,13 @@ FROM node:16
 
 WORKDIR /src/user/app
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
 
 RUN mkdir build
 
-COPY src ./src
+COPY src ./src/
 
 RUN npm run copy
 
